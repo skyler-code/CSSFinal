@@ -1,0 +1,121 @@
+.page_content
+{
+   color: black;
+   background-color: inherit;
+   position: relative;
+   top:0;
+   left: 0;
+   border-top: 1px solid black;
+   border-bottom: 1px solid black;
+   height: 100%;
+}
+
+.page_account_links
+{
+  text-align:right;
+  height: 14px;
+}
+
+.page_nav_links
+{
+ background:white url("http://www.kirkwood.edu/images/gradient_yellow_vert.jpg") repeat-x;
+ width: 168px;
+ height: 100%;
+ color:#005399;
+ position: relative;
+ top: 0px;
+ bottom: 0px;
+}
+
+.page_nav_links ul
+{
+ padding: 0px;
+ margin: 0px;
+}
+
+
+.page_nav_links li
+{
+  list-style-type: none;
+  padding-top: .9em;
+  padding-left: 6px;
+  padding-right: 3px;
+  font-weight: bold;
+}
+
+.page_nav_links a:link
+{
+  text-decoration: none;
+  color:#005399;
+  background-color: inherit;
+  text-decoration: none;
+}
+
+.page_nav_links a:visited
+{
+  text-decoration: none;
+  /*color:#7e375f;*/
+  color: #005399;
+  background-color: inherit;
+  text-decoration: none;
+  font-style: italic;
+  /*border-bottom: 1px inset #e0aa0f;*/
+}
+
+.page_nav_links a:active
+{
+  text-decoration: none;
+  color:#005399;
+  background-color: inherit;
+  text-decoration: none;
+}
+
+.page_nav_links a:hover
+{
+  text-decoration: none;
+  color:#256BEB;
+  background-color: inherit;
+  text-decoration: none;
+}
+
+.page_account_title
+{
+  font-size:20pt;
+  letter-spacing: -1px;
+  color:#005399;
+  font-weight: bold;
+  position: absolute;
+  top: -.6em;
+  left: 50px;
+  background-color: white;
+  padding-right: .5em;
+  padding-left: .5em;
+  text-decoration: none;
+}
+
+.page_account_title a:link
+{
+  color:#005399;
+  background-color: white;
+  text-decoration: none;
+}
+
+.page_contents
+{
+  padding-top: 0px;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-bottom: 10px;
+  height: 100%;
+}
+
+.page_text_default
+{
+  margin-top: 18px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  width: 590px;
+  height: 100%;
+  overflow: hidden;
+}
+

@@ -1,0 +1,27 @@
+a:link
+{
+   color: #005399;
+   text-decoration: underline;
+   background-color: inherit;
+}
+
+a:visited
+{
+   color: #7E375F;
+   text-decoration: underline;
+   background-color: inherit;
+}
+
+a:active
+{
+   color: #256BEB;
+   text-decoration: underline;
+   background-color: inherit;
+}
+
+a:hover
+{
+   color: #256BEB;
+   text-decoration: underline;
+   background-color: inherit;
+}
