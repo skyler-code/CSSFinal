@@ -25,3 +25,53 @@ a:hover
    text-decoration: underline;
    background-color: inherit;
 }
+
+ .overflow
+ {
+	height: 100px; 
+ }
+
+.app_tab
+{
+	display: inline-block;
+	border: 0px;
+}
+
+#middle_initial_label
+{
+	padding: 0em 0em 0em 4.8em;
+}
+
+#last_name_label
+{
+	padding: 0em 0em 0em 2.75em;
+}
+
+#fname {
+	width: 125px;
+}
+
+#midInitial
+{
+	width: 50px;
+}
+
+#lname {
+	width: 125px;
+}
+
+#streetaddress {
+	width: 200px;
+}
+
+#aptnumber {
+	width: 40px;
+}
+
+#zip {
+	width: 50px;
+}
+
+.error {
+    border: 1px solid red;
+}

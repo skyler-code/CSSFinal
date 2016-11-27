@@ -1,9 +1,16 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/transitional.dtd">
 <html lang="EN">
-<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
-<link rel="stylesheet" type="text/css" href="css/new_global_screen.css">
-<link rel="stylesheet" type="text/css" href="css/page_screen.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+    <link rel="stylesheet" type="text/css" href="css/new_global_screen.css">
+    <link rel="stylesheet" type="text/css" href="css/page_screen.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -32,16 +39,22 @@
                     <div class="global_navigation_bar2">
                         <li><a href="http://www.kirkwood.edu/apply.html">APPLY NOW</a></li>
                         <li>&#8226;</li>
+                        <!-- Bullet point -->
                         <li><a href="http://www.kirkwood.edu/admissions.html">Admissions</a></li>
                         <li>&#8226;</li>
+                        <!-- Bullet point -->
                         <li><a href="http://www.kirkwood.edu/students.html">Current Students</a></li>
                         <li>&#8226;</li>
+                        <!-- Bullet point -->
                         <li><a href="http://www.kirkwood.edu/academics.html">Academics</a></li>
                         <li>&#8226;</li>
+                        <!-- Bullet point -->
                         <li><a href="http://www.kirkwood.edu/ce.html">Continuing Education</a></li>
                         <li>&#8226;</li>
+                        <!-- Bullet point -->
                         <li><a href="http://www.kirkwood.edu/foundation.html">Alumni & Giving</a></li>
                         <li>&#8226;</li>
+                        <!-- Bullet point -->
                         <li><a href="http://www.kirkwood.edu/aboutus.html">About Us</a></li>
 
                     </div>
@@ -63,9 +76,236 @@
 
                                     <div class="page_text_default">
 
-                                        <!-- Display Child Links -->
+                                        <div id="application_form">
+                                            <h3 id="personal_details_tab">Applicant Information</h3>
+                                            <form class="app_tab" id="personal_details">
+                                                <label>First Name:</label>
+                                                <label id="middle_initial_label">MI:</label>
+                                                <label id="last_name_label">Last Name:</label>
+                                                <p/>
+                                                <input type="text" class="required" name="fname" id="fname" />
+                                                <input type="text" class="required" name="midinitial" id="midInitial" />
+                                                <input type="text" class="required" name="lname" id="lname" />
+                                                <p />
+                                                <label>Address:</label>
+                                                <input type="text" class="required" name="streetaddress" id="streetaddress" />
+                                                <label>Apt #:</label>
+                                                <input type="text" name="aptnumber" id="aptnumber" />
+                                                <p />
+                                                <label>City:</label>
+                                                <input type="text" class="required" name="city" id="city" />
+                                                <label>State:</label>
+                                                <select id="state_select_menu">
+                                                    <option value="AL">AL</option>
+                                                    <option value="AK">AK</option>
+                                                    <option value="AZ">AZ</option>
+                                                    <option value="AR">AR</option>
+                                                    <option value="CA">CA</option>
+                                                    <option value="CO">CO</option>
+                                                    <option value="CT">CT</option>
+                                                    <option value="DE">DE</option>
+                                                    <option value="DC">DC</option>
+                                                    <option value="FL">FL</option>
+                                                    <option value="GA">GA</option>
+                                                    <option value="HI">HI</option>
+                                                    <option value="ID">ID</option>
+                                                    <option value="IL">IL</option>
+                                                    <option value="IN">IN</option>
+                                                    <option selected="selected" value="IA">IA</option>
+                                                    <option value="KS">KS</option>
+                                                    <option value="KY">KY</option>
+                                                    <option value="LA">LA</option>
+                                                    <option value="ME">ME</option>
+                                                    <option value="MD">MD</option>
+                                                    <option value="MA">MA</option>
+                                                    <option value="MI">MI</option>
+                                                    <option value="MN">MN</option>
+                                                    <option value="MS">MS</option>
+                                                    <option value="MO">MO</option>
+                                                    <option value="MT">MT</option>
+                                                    <option value="NE">NE</option>
+                                                    <option value="NV">NV</option>
+                                                    <option value="NH">NH</option>
+                                                    <option value="NJ">NJ</option>
+                                                    <option value="NM">NM</option>
+                                                    <option value="NY">NY</option>
+                                                    <option value="NC">NC</option>
+                                                    <option value="ND">ND</option>
+                                                    <option value="OH">OH</option>
+                                                    <option value="OK">OK</option>
+                                                    <option value="OR">OR</option>
+                                                    <option value="PA">PA</option>
+                                                    <option value="RI">RI</option>
+                                                    <option value="SC">SC</option>
+                                                    <option value="SD">SD</option>
+                                                    <option value="TN">TN</option>
+                                                    <option value="TX">TX</option>
+                                                    <option value="UT">UT</option>
+                                                    <option value="VT">VT</option>
+                                                    <option value="VA">VA</option>
+                                                    <option value="WA">WA</option>
+                                                    <option value="WV">WV</option>
+                                                    <option value="WI">WI</option>
+                                                    <option value="WY">WY</option>
+                                                </select>
+                                                <label>Zip:</label>
+                                                <input type="text" class="required" name="zip" id="zip" />
+                                                <p />
+                                                <label>Phone:</label>
+                                                <input type="text" class="required" name="phonenumber" id="phonenumber" />
+                                                <p />
+                                                <label>Email Address:</label>
+                                                <input type="text" class="required" name="emailaddress" id="emailaddress" />
+                                                <p />
+                                                <label>Date Available:</label>
+                                                <input type="text" class="required" name="dateavailable" id="dateavailable" />
+                                                <p />
+                                                <label>Social Security No.:</label>
+                                                <input type="text" class="required" name="socialsecuritynumber" id="socialsecuritynumber" />
+                                                <p />
+                                                <label>Desired Salary:</label>
+                                                <input type="text" class="required" name="desiredsalary" id="desiredsalary" />
+												<p />
+                                                <div class="applicationradio" id="uscitizenradio">
+												<label>Are you a citizen of the United States?</label>
+                                                    <input type="radio" id="uscitizen-yes" name="uscitizen" class="required"><label for="uscitizen-yes">Yes</label>
+													<input type="radio" id="uscitizen-no" name="uscitizen"><label for="uscitizen-no">No</label>
+                                                </div>
+												<p />
+												<div class="applicationradio" id="authorizedtoworkinusradio">
+												<label>If no, are you authorized to work in the U.S.?</label>
+                                                    <input type="radio" id="authorizedtoworkinus-yes" name="authorizedtoworkinus" class="required"><label for="authorizedtoworkinus-yes">Yes</label>
+													<input type="radio" id="authorizedtoworkinus-no" name="authorizedtoworkinus"><label for="authorizedtoworkinus-no">No</label>
+                                                </div>
+												<p />
+												<div class="applicationradio" id="haveyouworkedforthiscompanyradio">
+												<label>Have you ever worked for this company?</label>
+                                                    <input type="radio" id="haveyouworkedforthiscompany-yes" name="haveyouworkedforthiscompany" class="required"><label for="haveyouworkedforthiscompany-yes">Yes</label>
+													<input type="radio" id="haveyouworkedforthiscompany-no" name="haveyouworkedforthiscompany"><label for="haveyouworkedforthiscompany-no">No</label>
+                                                </div>
+												<p />
+												<label>If yes, when:</label>
+												<input type="text" class="required" name="whendidyouworkforthiscompany" id="whendidyouworkforthiscompany" />
+												<div class="applicationradio" id="haveyoubeenconvictedofafelonyradio">
+												<label>Have you ever been convicted of a felony?</label>
+                                                    <input type="radio" id="haveyoubeenconvictedofafelony-yes" name="haveyoubeenconvictedofafelony" class="required"><label for="haveyoubeenconvictedofafelony-yes">Yes</label>
+													<input type="radio" id="haveyoubeenconvictedofafelony-no" name="haveyoubeenconvictedofafelonyy"><label for="haveyoubeenconvictedofafelony-no">No</label>
+                                                </div>
+													<label>If yes, explain:</label>
+													<input type="text" class="required" name="felonyexplanation" id="felonyexplanation" />
+													<p />
 
-                                        <!--display content -->
+                                                <input type="button" value="Proceed" name="proceed" id="personalProceed" />
+                                            </form>
+                                            <h3 id="education_tab">Education</h3>
+                                            <form class="app_tab" id="education_details">
+                                                <label>High School:</label>
+                                                <input type="text" class="required" name="highschoolname" id="highschoolname" />
+												<p />
+												<label>Address:</label>
+                                                <input type="text" class="required" name="highschooladdress" id="highschooladdress" />
+												<p />
+												<label>From:</label>
+                                                <input type="text" class="required" name="highschoolfrom" id="highschoolfrom" />
+												<label>To:</label>
+                                                <input type="text" class="required" name="highschoolto" id="highschoolto" />
+												<div class="applicationradio" id="highschool-didyougraduateradio">
+												<label>Did you graduate?</label>
+                                                    <input type="radio" id="highschool-didyougraduate-yes" name="highschool-didyougraduate" class="required"><label for="highschool-didyougraduate-yes">Yes</label>
+													<input type="radio" id="highschool-didyougraduate-no" name="highschool-didyougraduate"><label for="highschool-didyougraduate-no">No</label>
+                                                </div>
+												<p />
+												<label>Diploma:</label>
+                                                <input type="text" class="required" name="highschooldiploma" id="highschooldiploma" />
+												<p />
+												<label>College:</label>
+                                                <input type="text" name="collegename" id="collegename" />
+												<p />
+												<label>Address:</label>
+                                                <input type="text" name="collegeaddress" id="collegeaddress" />
+												<p />
+												<label>From:</label>
+                                                <input type="text" name="collegefrom" id="collegefrom" />
+												<label>To:</label>
+                                                <input type="text" name="collegeto" id="collegeto" />
+												<p />
+												<label>Degree:</label>
+                                                <input type="text" name="collegedegree" id="collegedegree" />
+												<p />
+												<label>Other:</label>
+                                                <input type="text" name="othername" id="othername" />
+												<p />
+												<label>Address:</label>
+                                                <input type="text" name="otheraddress" id="otheraddress" />
+												<p />
+												<label>From:</label>
+                                                <input type="text" name="otherfrom" id="otherfrom" />
+												<label>To:</label>
+                                                <input type="text" name="otherto" id="otherto" />
+												<p />
+												<label>Degree:</label>
+                                                <input type="text" name="otherdegree" id="otherdegree" />
+												<input type="button" value="Proceed" name="proceed" id="educationProceed" />
+											</form>
+                                            <h3 id="references_tab">References</h3>
+                                            <form class="app_tab" id="reference_details">
+												<label><i>Please list three professional references.</i></label>
+												<p />
+												<label>Reference 1:</label>
+												<p />
+												<label>Full Name:</label>
+                                                <input class="required" type="text" name="fullname1" id="fullname1" />
+												<label>Relationship:</label>
+                                                <input class="required" type="text" name="relationship1" id="relationship1" />
+												<p />
+												<label>Company:</label>
+                                                <input class="required" type="text" name="company1" id="company1" />
+												<label>Phone:</label>
+                                                <input class="required" type="text" name="phone1" id="phone1" />
+												<p />
+												<label>Address:</label>
+                                                <input class="required" type="text" name="address1" id="address1" />
+												<hr/>
+												<label>Reference 2:</label>
+												<p />
+												<label>Full Name:</label>
+                                                <input class="required" type="text" name="fullname2" id="fullname2" />
+												<label>Relationship:</label>
+                                                <input class="required" type="text" name="relationship2" id="relationship2" />
+												<p />
+												<label>Company:</label>
+                                                <input class="required" type="text" name="company2" id="company2" />
+												<label>Phone:</label>
+                                                <input class="required" type="text" name="phone2" id="phone2" />
+												<p />
+												<label>Address:</label>
+                                                <input class="required" type="text" name="address2" id="address2" />
+												<hr/>
+												<label>Reference 3:</label>
+												<p />
+												<label>Full Name:</label>
+                                                <input class="required" type="text" name="fullname3" id="fullname3" />
+												<label>Relationship:</label>
+                                                <input class="required" type="text" name="relationship3" id="relationship3" />
+												<p />
+												<label>Company:</label>
+                                                <input class="required" type="text" name="company3" id="company3" />
+												<label>Phone:</label>
+                                                <input class="required" type="text" name="phone3" id="phone3" />
+												<p />
+												<label>Address:</label>
+                                                <input class="required" type="text" name="address3" id="address3" />
+												<input type="button" value="Proceed" name="proceed" id="referencesProceed" />
+											</form>
+                                            <h3 id="previous_employment_tab">Previous Employment</h3>
+                                            <form class="app_tab" id="previous_employment_details">
+                                                <p>worksheet 3 here....worksheet 3 here....worksheet 3 here....worksheet 3 here....worksheet 3 here....worksheet 3 here....worksheet 3 here....worksheet 3 here....worksheet 3 here....worksheet 3 here....worksheet 3 here....worksheet 3 here....worksheet 3 here....worksheet 3 here....worksheet 3 here....worksheet 3 here....worksheet 3 here....</p>
+                                            </form>
+                                            <h3 id="signature_tab">Signature</h3>
+                                            <form class="app_tab" id="signature">
+
+                                            </form>
+                                        </div>
 
                                     </div>
                                 </td>
