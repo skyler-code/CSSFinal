@@ -14,10 +14,14 @@ $(document).ready(function () {
 	}).selectmenu("menuWidget").addClass("overflow");
 	
 	$('#dateavailable').datepicker({dateFormat: 'mm/dd/yy'});
+	$('#datesigned').datepicker({dateFormat: 'mm/dd/yy'});
 	
 	$('.applicationradio > input').checkboxradio();
 	
 	$("#application_form").accordion({
+		heightStyle: "content",
+	});
+	$("#employer_accordion").accordion({
 		heightStyle: "content",
 	});
 	
@@ -47,6 +51,14 @@ $(document).ready(function () {
 		
 		//if( $('#education_details').valid() == true ) {
 			$('#previous_employment_tab').removeClass("ui-state-disabled");
+			var activeTab = $( "#application_form" ).accordion( "option", "active" );
+			$('#application_form').accordion("option", "active", activeTab + 1);
+		//}
+	});
+	$('#employersProceed').click(function(){
+		
+		//if( $('#education_details').valid() == true ) {
+			$('#signature_tab').removeClass("ui-state-disabled");
 			var activeTab = $( "#application_form" ).accordion( "option", "active" );
 			$('#application_form').accordion("option", "active", activeTab + 1);
 		//}

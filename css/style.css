@@ -35,6 +35,7 @@ a:hover
 {
 	display: inline-block;
 	border: 0px;
+	width: 90%;
 }
 
 #middle_initial_label
