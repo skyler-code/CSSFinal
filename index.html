@@ -1,5 +1,5 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/transitional.dtd">
-<html lang="EN">
+<!DOCTYPE HTML>
+<html>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
@@ -9,7 +9,8 @@
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
     <script src="js/jquery.js"></script>
     <script src="js/jquery-ui.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/additional-methods.js"></script>
     <script src="js/script.js"></script>
 </head>
 
@@ -79,22 +80,22 @@
                                         <div id="application_form">
                                             <h3 id="personal_details_tab">Applicant Information</h3>
                                             <form class="app_tab" id="personal_details">
-                                                <label>First Name:</label>
-                                                <label id="middle_initial_label">MI:</label>
-                                                <label id="last_name_label">Last Name:</label>
+                                                <label class="required_label">First Name:</label>
+                                                <label class="required_label" id="middle_initial_label">MI:</label>
+                                                <label class="required_label" id="last_name_label">Last Name:</label>
                                                 <p/>
                                                 <input type="text" class="required" name="fname" id="fname" />
                                                 <input type="text" class="required" name="midinitial" id="midInitial" />
                                                 <input type="text" class="required" name="lname" id="lname" />
                                                 <p />
-                                                <label>Address:</label>
+                                                <label class="required_label">Address:</label>
                                                 <input type="text" class="required" name="streetaddress" id="streetaddress" />
                                                 <label>Apt #:</label>
                                                 <input type="text" name="aptnumber" id="aptnumber" />
                                                 <p />
-                                                <label>City:</label>
+                                                <label class="required_label">City:</label>
                                                 <input type="text" class="required" name="city" id="city" />
-                                                <label>State:</label>
+                                                <label class="required_label">State:</label>
                                                 <select id="state_select_menu">
                                                     <option value="AL">AL</option>
                                                     <option value="AK">AK</option>
@@ -148,52 +149,66 @@
                                                     <option value="WI">WI</option>
                                                     <option value="WY">WY</option>
                                                 </select>
-                                                <label>Zip:</label>
-                                                <input type="text" class="required" name="zip" id="zip" />
+                                                <label class="required_label">Zip:</label>
+                                                <input type="zipcodeUS" class="required" name="zip_code" id="zip_code" />
                                                 <p />
-                                                <label>Phone:</label>
-                                                <input type="text" class="required" name="phonenumber" id="phonenumber" />
+                                                <label class="required_label">Phone:</label>
+                                                <input type="phoneUS" class="required" name="phonenumber" id="phone_number" />
                                                 <p />
-                                                <label>Email Address:</label>
-                                                <input type="text" class="required" name="emailaddress" id="emailaddress" />
+                                                <label class="required_label">Email Address:</label>
+                                                <input type="email" class="required" name="emailaddress" id="email_address" />
                                                 <p />
-                                                <label>Date Available:</label>
-                                                <input type="text" class="required" name="dateavailable" id="dateavailable" />
+                                                <label class="required_label">Date Available:</label>
+                                                <input type="text" class="required datepicker" name="dateavailable" id="date_available" />
                                                 <p />
-                                                <label>Social Security No.:</label>
-                                                <input type="text" class="required" name="socialsecuritynumber" id="socialsecuritynumber" />
+                                                <label class="required_label">Social Security No.:</label>
+                                                <input type="text" class="required" name="socialsecuritynumber" id="social_security_number" />
                                                 <p />
-                                                <label>Desired Salary:</label>
-                                                <input type="text" class="required" name="desiredsalary" id="desiredsalary" />
-												<p />
+                                                <label class="required_label">Desired Salary: $</label>
+                                                <input type="text" class="required" name="desiredsalary" id="desired_salary" />
+                                                <p />
                                                 <div class="applicationradio" id="uscitizenradio">
-												<label>Are you a citizen of the United States?</label>
-                                                    <input type="radio" id="uscitizen-yes" name="uscitizen" class="required"><label for="uscitizen-yes">Yes</label>
-													<input type="radio" id="uscitizen-no" name="uscitizen"><label for="uscitizen-no">No</label>
+                                                    <label class="required_label">Are you a citizen of the United States?</label>
+                                                    <input type="radio" id="uscitizen-yes" name="uscitizen" class="required">
+                                                    <label for="uscitizen-yes">Yes</label>
+                                                    <input type="radio" id="uscitizen-no" name="uscitizen">
+                                                    <label for="uscitizen-no">No</label>
                                                 </div>
-												<p />
-												<div class="applicationradio" id="authorizedtoworkinusradio">
-												<label>If no, are you authorized to work in the U.S.?</label>
-                                                    <input type="radio" id="authorizedtoworkinus-yes" name="authorizedtoworkinus" class="required"><label for="authorizedtoworkinus-yes">Yes</label>
-													<input type="radio" id="authorizedtoworkinus-no" name="authorizedtoworkinus"><label for="authorizedtoworkinus-no">No</label>
+                                                <p />
+                                                <div class="applicationradio" id="authorizedtoworkinusradio">
+                                                    <label>If no, are you authorized to work in the U.S.?</label>
+                                                    <input type="radio" id="authorizedtoworkinus-yes" name="authorizedtoworkinus" class="required">
+                                                    <label for="authorizedtoworkinus-yes">Yes</label>
+                                                    <input type="radio" id="authorizedtoworkinus-no" name="authorizedtoworkinus">
+                                                    <label for="authorizedtoworkinus-no">No</label>
                                                 </div>
-												<p />
-												<div class="applicationradio" id="haveyouworkedforthiscompanyradio">
-												<label>Have you ever worked for this company?</label>
-                                                    <input type="radio" id="haveyouworkedforthiscompany-yes" name="haveyouworkedforthiscompany" class="required"><label for="haveyouworkedforthiscompany-yes">Yes</label>
-													<input type="radio" id="haveyouworkedforthiscompany-no" name="haveyouworkedforthiscompany"><label for="haveyouworkedforthiscompany-no">No</label>
+                                                <p />
+                                                <div class="applicationradio" id="haveyouworkedforthiscompanyradio">
+                                                    <label>Have you ever worked for this company?</label>
+                                                    <input type="radio" id="haveyouworkedforthiscompany-yes" name="haveyouworkedforthiscompany" class="required">
+                                                    <label for="haveyouworkedforthiscompany-yes">Yes</label>
+                                                    <input type="radio" id="haveyouworkedforthiscompany-no" name="haveyouworkedforthiscompany">
+                                                    <label for="haveyouworkedforthiscompany-no">No</label>
                                                 </div>
-												<p />
-												<label>If yes, when:</label>
-												<input type="text" class="required" name="whendidyouworkforthiscompany" id="whendidyouworkforthiscompany" />
-												<div class="applicationradio" id="haveyoubeenconvictedofafelonyradio">
-												<label>Have you ever been convicted of a felony?</label>
-                                                    <input type="radio" id="haveyoubeenconvictedofafelony-yes" name="haveyoubeenconvictedofafelony" class="required"><label for="haveyoubeenconvictedofafelony-yes">Yes</label>
-													<input type="radio" id="haveyoubeenconvictedofafelony-no" name="haveyoubeenconvictedofafelonyy"><label for="haveyoubeenconvictedofafelony-no">No</label>
+                                                <p />
+                                                <div id="previous_worker">
+                                                    <label>If yes, when was your last day of work:</label>
+                                                    <input type="text" class="datepicker" name="whendidyouworkforthiscompany" id="whendidyouworkforthiscompany" />
                                                 </div>
-													<label>If yes, explain:</label>
-													<input type="text" class="required" name="felonyexplanation" id="felonyexplanation" />
-													<p />
+                                                <p />
+                                                <div class="applicationradio" id="haveyoubeenconvictedofafelonyradio">
+                                                    <label>Have you ever been convicted of a felony?</label>
+                                                    <input type="radio" id="haveyoubeenconvictedofafelony-yes" name="haveyoubeenconvictedofafelony" class="required">
+                                                    <label for="haveyoubeenconvictedofafelony-yes">Yes</label>
+                                                    <input type="radio" id="haveyoubeenconvictedofafelony-no" name="haveyoubeenconvictedofafelony">
+                                                    <label for="haveyoubeenconvictedofafelony-no">No</label>
+                                                </div>
+                                                <p/>
+                                                <div id="felony_explanation">
+                                                    <label>If yes, explain:</label>
+                                                    <input type="text" class="required" name="felonyexplanation" id="felonyexplanation" />
+                                                </div>
+                                                <p />
 
                                                 <input type="button" value="Proceed" name="proceed" id="personalProceed" />
                                             </form>
@@ -201,262 +216,277 @@
                                             <form class="app_tab" id="education_details">
                                                 <label>High School:</label>
                                                 <input type="text" class="required" name="highschoolname" id="highschoolname" />
-												<p />
-												<label>Address:</label>
+                                                <p />
+                                                <label>Address:</label>
                                                 <input type="text" class="required" name="highschooladdress" id="highschooladdress" />
-												<p />
-												<label>From:</label>
-                                                <input type="text" class="required" name="highschoolfrom" id="highschoolfrom" />
-												<label>To:</label>
-                                                <input type="text" class="required" name="highschoolto" id="highschoolto" />
-												<div class="applicationradio" id="highschool-didyougraduateradio">
-												<label>Did you graduate?</label>
-                                                    <input type="radio" id="highschool-didyougraduate-yes" name="highschool-didyougraduate" class="required"><label for="highschool-didyougraduate-yes">Yes</label>
-													<input type="radio" id="highschool-didyougraduate-no" name="highschool-didyougraduate"><label for="highschool-didyougraduate-no">No</label>
+                                                <p />
+                                                <label>From:</label>
+                                                <input type="text" class="required datepicker" name="highschoolfrom" id="highschoolfrom" />
+                                                <label>To:</label>
+                                                <input type="text" class="required datepicker" name="highschoolto" id="highschoolto" />
+                                                <div class="applicationradio" id="highschool-didyougraduateradio">
+                                                    <label>Did you graduate?</label>
+                                                    <input type="radio" id="highschool-didyougraduate-yes" name="highschool-didyougraduate" class="required">
+                                                    <label for="highschool-didyougraduate-yes">Yes</label>
+                                                    <input type="radio" id="highschool-didyougraduate-no" name="highschool-didyougraduate">
+                                                    <label for="highschool-didyougraduate-no">No</label>
                                                 </div>
-												<p />
-												<label>Diploma:</label>
+                                                <p />
+                                                <label>Diploma:</label>
                                                 <input type="text" class="required" name="highschooldiploma" id="highschooldiploma" />
-												
-												<hr />
-												<label>College:</label>
+
+                                                <hr />
+                                                <label>College:</label>
                                                 <input type="text" name="collegename" id="collegename" />
-												<p />
-												<label>Address:</label>
+                                                <p />
+                                                <label>Address:</label>
                                                 <input type="text" name="collegeaddress" id="collegeaddress" />
-												<p />
-												<label>From:</label>
-                                                <input type="text" name="collegefrom" id="collegefrom" />
-												<label>To:</label>
-                                                <input type="text" name="collegeto" id="collegeto" />
-												<div class="applicationradio" id="college-didyougraduateradio">
-												<label>Did you graduate?</label>
-                                                    <input type="radio" id="college-didyougraduate-yes" name="college-didyougraduate" class="required"><label for="college-didyougraduate-yes">Yes</label>
-													<input type="radio" id="college-didyougraduate-no" name="college-didyougraduate"><label for="college-didyougraduate-no">No</label>
+                                                <p />
+                                                <label>From:</label>
+                                                <input type="text" class="datepicker" name="collegefrom" id="collegefrom" />
+                                                <label>To:</label>
+                                                <input type="text" class="datepicker" name="collegeto" id="collegeto" />
+                                                <div class="applicationradio" id="college-didyougraduateradio">
+                                                    <label>Did you graduate?</label>
+                                                    <input type="radio" id="college-didyougraduate-yes" name="college-didyougraduate" class="required">
+                                                    <label for="college-didyougraduate-yes">Yes</label>
+                                                    <input type="radio" id="college-didyougraduate-no" name="college-didyougraduate">
+                                                    <label for="college-didyougraduate-no">No</label>
                                                 </div>
-												<p />
-												<label>Degree:</label>
+                                                <p />
+                                                <label>Degree:</label>
                                                 <input type="text" name="collegedegree" id="collegedegree" />
-												<hr/>
-												<label>Other:</label>
+                                                <hr/>
+                                                <label>Other:</label>
                                                 <input type="text" name="othername" id="othername" />
-												<p />
-												<label>Address:</label>
+                                                <p />
+                                                <label>Address:</label>
                                                 <input type="text" name="otheraddress" id="otheraddress" />
-												<p />
-												<label>From:</label>
-                                                <input type="text" name="otherfrom" id="otherfrom" />
-												<label>To:</label>
-                                                <input type="text" name="otherto" id="otherto" />
-												<div class="applicationradio" id="other-didyougraduateradio">
-												<label>Did you graduate?</label>
-                                                    <input type="radio" id="other-didyougraduate-yes" name="other-didyougraduate" class="required"><label for="other-didyougraduate-yes">Yes</label>
-													<input type="radio" id="other-didyougraduate-no" name="other-didyougraduate"><label for="other-didyougraduate-no">No</label>
+                                                <p />
+                                                <label>From:</label>
+                                                <input type="text" class="datepicker" name="otherfrom" id="otherfrom" />
+                                                <label>To:</label>
+                                                <input type="text" class="datepicker" name="otherto" id="otherto" />
+                                                <div class="applicationradio" id="other-didyougraduateradio">
+                                                    <label>Did you graduate?</label>
+                                                    <input type="radio" id="other-didyougraduate-yes" name="other-didyougraduate" class="required">
+                                                    <label for="other-didyougraduate-yes">Yes</label>
+                                                    <input type="radio" id="other-didyougraduate-no" name="other-didyougraduate">
+                                                    <label for="other-didyougraduate-no">No</label>
                                                 </div>
-												<p />
-												<label>Degree:</label>
+                                                <p />
+                                                <label>Degree:</label>
                                                 <input type="text" name="otherdegree" id="otherdegree" />
-												<input type="button" value="Proceed" name="proceed" id="educationProceed" />
-											</form>
+                                                <input type="button" value="Previous" name="previous" id="educationPrevious" />
+                                                <input type="button" value="Proceed" name="proceed" id="educationProceed" />
+                                            </form>
                                             <h3 id="references_tab">References</h3>
                                             <form class="app_tab" id="reference_details">
-												<label><i>Please list three professional references.</i></label>
-												<p />
-												<label><b>Reference 1:</b></label>
-												<p />
-												<label>Full Name:</label>
+                                                <label><i>Please list three professional references.</i></label>
+                                                <p />
+                                                <label><b>Reference 1:</b></label>
+                                                <p />
+                                                <label>Full Name:</label>
                                                 <input class="required" type="text" name="referencefullname1" id="referencefullname1" />
-												<label>Relationship:</label>
+                                                <label>Relationship:</label>
                                                 <input class="required" type="text" name="referencerelationship1" id="referencerelationship1" />
-												<p />
-												<label>Company:</label>
+                                                <p />
+                                                <label>Company:</label>
                                                 <input class="required" type="text" name="referencecompany1" id="referencecompany1" />
-												<label>Phone:</label>
+                                                <label>Phone:</label>
                                                 <input class="required" type="text" name="referencephone1" id="referencephone1" />
-												<p />
-												<label>Address:</label>
+                                                <p />
+                                                <label>Address:</label>
                                                 <input class="required" type="text" name="referenceaddress1" id="referenceaddress1" />
-												<hr/>
-												<label><b>Reference 2:</b></label>
-												<p />
-												<label>Full Name:</label>
+                                                <hr/>
+                                                <label><b>Reference 2:</b></label>
+                                                <p />
+                                                <label>Full Name:</label>
                                                 <input class="required" type="text" name="referencefullname2" id="referencefullname2" />
-												<label>Relationship:</label>
+                                                <label>Relationship:</label>
                                                 <input class="required" type="text" name="referencerelationship2" id="referencerelationship2" />
-												<p />
-												<label>Company:</label>
+                                                <p />
+                                                <label>Company:</label>
                                                 <input class="required" type="text" name="referencecompany2" id="referencecompany2" />
-												<label>Phone:</label>
+                                                <label>Phone:</label>
                                                 <input class="required" type="text" name="referencephone2" id="referencephone2" />
-												<p />
-												<label>Address:</label>
+                                                <p />
+                                                <label>Address:</label>
                                                 <input class="required" type="text" name="referenceaddress2" id="referenceaddress2" />
-												<hr/>
-												<label><b>Reference 3:</b></label>
-												<p />
-												<label>Full Name:</label>
+                                                <hr/>
+                                                <label><b>Reference 3:</b></label>
+                                                <p />
+                                                <label>Full Name:</label>
                                                 <input class="required" type="text" name="referencefullname3" id="referencefullname3" />
-												<label>Relationship:</label>
+                                                <label>Relationship:</label>
                                                 <input class="required" type="text" name="referencerelationship3" id="referencerelationship3" />
-												<p />
-												<label>Company:</label>
+                                                <p />
+                                                <label>Company:</label>
                                                 <input class="required" type="text" name="referencecompany3" id="referencecompany3" />
-												<label>Phone:</label>
+                                                <label>Phone:</label>
                                                 <input class="required" type="text" name="referencephone3" id="referencephone3" />
-												<p />
-												<label>Address:</label>
+                                                <p />
+                                                <label>Address:</label>
                                                 <input class="required" type="text" name="referenceaddress3" id="referenceaddress3" />
-												<input type="button" value="Proceed" name="proceed" id="referencesProceed" />
-											</form>
+                                                <input type="button" value="Proceed" name="proceed" id="referencesProceed" />
+                                            </form>
                                             <h3 id="previous_employment_tab">Previous Employment</h3>
                                             <form class="app_tab" id="previous_employment_details">
-													<label><b>Employer 1:</b></label>
-													<p />
-													<label>Company:</label>
-													<input class="required" type="text" name="employer1company" id="employer1company" />
-													<p />
-													<label>Phone:</label>
-													<input class="required" type="text" name="employer1phone" id="employer1phone" />
-													<p />
-													<label>Address:</label>
-													<input class="required" type="text" name="employer1address" id="employer1address" />
-													<p />
-													<label>Supervisor:</label>
-													<input class="required" type="text" name="employer1supervisor" id="employer1supervisor" />
-													<p />
-													<label>Job Title:</label>
-													<input class="required" type="text" name="employer1jobtitle" id="employer1jobtitle" />
-													<p />
-													<label>Starting Salary: $</label>
-													<input class="required" type="text" name="employer1startingsalary" id="employer1startingsalary" />
-													<p />
-													<label>Ending Salary: $</label>
-													<input class="required" type="text" name="employer1endingsalary" id="employer1endingsalary" />
-													<p />
-													<label>Responsibilities:</label>
-													<input class="required" type="text" name="employer1responsibilities" id="employer1responsibilities" />
-													<p />
-													<label>From:</label>
-													<input class="required" type="text" name="employer1from" id="employer1from" />
-													<label>To:</label>
-													<input class="required" type="text" name="employer1to" id="employer1to" />
-													<p />
-													<label>Reason for Leaving:</label>
-													<input class="required" type="text" name="employer1reasonforleaving" id="employer1reasonforleaving" />
-													<div class="applicationradio" id="employer1-maywecontactradio">
-													<label>May we contact your previous supervisor for a reference?</label>
-														<input type="radio" id="employer1-maywecontact-yes" name="employer1-maywecontact" class="required"><label for="employer1-maywecontact-yes">Yes</label>
-														<input type="radio" id="employer1-maywecontact-no" name="employer1-maywecontact"><label for="employer1-maywecontact-no">No</label>
-													</div>
-													<hr />
-													<label><b>Employer 2:</b></label>
-													<p />
-													<label>Company:</label>
-													<input class="required" type="text" name="employer2company" id="employer2company" />
-													<p />
-													<label>Phone:</label>
-													<input class="required" type="text" name="employer2phone" id="employer2phone" />
-													<p />
-													<label>Address:</label>
-													<input class="required" type="text" name="employer2address" id="employer2address" />
-													<p />
-													<label>Supervisor:</label>
-													<input class="required" type="text" name="employer2supervisor" id="employer2supervisor" />
-													<p />
-													<label>Job Title:</label>
-													<input class="required" type="text" name="employer2jobtitle" id="employer2jobtitle" />
-													<p />
-													<label>Starting Salary: $</label>
-													<input class="required" type="text" name="employer2startingsalary" id="employer2startingsalary" />
-													<p />
-													<label>Ending Salary: $</label>
-													<input class="required" type="text" name="employer2endingsalary" id="employer2endingsalary" />
-													<p />
-													<label>Responsibilities:</label>
-													<input class="required" type="text" name="employer2responsibilities" id="employer2responsibilities" />
-													<p />
-													<label>From:</label>
-													<input class="required" type="text" name="employer2from" id="employer2from" />
-													<label>To:</label>
-													<input class="required" type="text" name="employer2to" id="employer2to" />
-													<p />
-													<label>Reason for Leaving:</label>
-													<input class="required" type="text" name="employer2reasonforleaving" id="employer2reasonforleaving" />
-													<div class="applicationradio" id="employer2-maywecontactradio">
-													<label>May we contact your previous supervisor for a reference?</label>
-														<input type="radio" id="employer2-maywecontact-yes" name="employer2-maywecontact" class="required"><label for="employer2-maywecontact-yes">Yes</label>
-														<input type="radio" id="employer2-maywecontact-no" name="employer2-maywecontact"><label for="employer2-maywecontact-no">No</label>
-													</div>
-													<hr />
-													<label><b>Employer 3:</b></label>
-													<p />
-													<label>Company:</label>
-													<input class="required" type="text" name="employer3company" id="employer3company" />
-													<p />
-													<label>Phone:</label>
-													<input class="required" type="text" name="employer3phone" id="employer3phone" />
-													<p />
-													<label>Address:</label>
-													<input class="required" type="text" name="employer3address" id="employer3address" />
-													<p />
-													<label>Supervisor:</label>
-													<input class="required" type="text" name="employer3supervisor" id="employer3supervisor" />
-													<p />
-													<label>Job Title:</label>
-													<input class="required" type="text" name="employer3jobtitle" id="employer3jobtitle" />
-													<p />
-													<label>Starting Salary: $</label>
-													<input class="required" type="text" name="employer3startingsalary" id="employer3startingsalary" />
-													<p />
-													<label>Ending Salary: $</label>
-													<input class="required" type="text" name="employer3endingsalary" id="employer3endingsalary" />
-													<p />
-													<label>Responsibilities:</label>
-													<input class="required" type="text" name="employer3responsibilities" id="employer3responsibilities" />
-													<p />
-													<label>From:</label>
-													<input class="required" type="text" name="employer3from" id="employer3from" />
-													<label>To:</label>
-													<input class="required" type="text" name="employer3to" id="employer3to" />
-													<p />
-													<label>Reason for Leaving:</label>
-													<input class="required" type="text" name="employer3reasonforleaving" id="employer3reasonforleaving" />
-													<div class="applicationradio" id="employer3-maywecontactradio">
-													<label>May we contact your previous supervisor for a reference?</label>
-														<input type="radio" id="employer3-maywecontact-yes" name="employer3-maywecontact" class="required"><label for="employer3-maywecontact-yes">Yes</label>
-														<input type="radio" id="employer3-maywecontact-no" name="employer3-maywecontact"><label for="employer3-maywecontact-no">No</label>
-													</div>
-													<hr />
-													<label><b>Military Service:</b></label>
-													<p/>
-													<label>Branch:</label>
-													<input type="text" name="militarybranch" id="militarybranch" />
-													<p />
-													<label>From:</label>
-													<input type="text" name="militaryfrom" id="militaryfrom" />
-													<label>To:</label>
-													<input type="text" name="militaryto" id="militaryto" />
-													<p />
-													<label>Rank at Discharge:</label>
-													<input type="text" name="militaryrankatdischarge" id="militaryrankatdischarge" />
-													<p />
-													<label>Type of Discharge:</label>
-													<input type="text" name="militarytypeofdischarge" id="militarytypeofdischarge" />
-													<p/>
-													<label>If other than honorable, explain:</label>
-													<input type="text" name="militarydischargeexplanation" id="militarydischargeexplanation" />
-													<input type="button" value="Proceed" name="proceed" id="employersProceed" />
-											</form>
+                                                <label><b>Employer 1:</b></label>
+                                                <p />
+                                                <label>Company:</label>
+                                                <input class="required" type="text" name="employer1company" id="employer1company" />
+                                                <p />
+                                                <label>Phone:</label>
+                                                <input class="required" type="text" name="employer1phone" id="employer1phone" />
+                                                <p />
+                                                <label>Address:</label>
+                                                <input class="required" type="text" name="employer1address" id="employer1address" />
+                                                <p />
+                                                <label>Supervisor:</label>
+                                                <input class="required" type="text" name="employer1supervisor" id="employer1supervisor" />
+                                                <p />
+                                                <label>Job Title:</label>
+                                                <input class="required" type="text" name="employer1jobtitle" id="employer1jobtitle" />
+                                                <p />
+                                                <label>Starting Salary: $</label>
+                                                <input class="required" type="text" name="employer1startingsalary" id="employer1startingsalary" />
+                                                <p />
+                                                <label>Ending Salary: $</label>
+                                                <input class="required" type="text" name="employer1endingsalary" id="employer1endingsalary" />
+                                                <p />
+                                                <label>Responsibilities:</label>
+                                                <input class="required" type="text" name="employer1responsibilities" id="employer1responsibilities" />
+                                                <p />
+                                                <label>From:</label>
+                                                <input class="required datepicker" type="text" name="employer1from" id="employer1from" />
+                                                <label>To:</label>
+                                                <input class="required datepicker" type="text" name="employer1to" id="employer1to" />
+                                                <p />
+                                                <label>Reason for Leaving:</label>
+                                                <input class="required" type="text" name="employer1reasonforleaving" id="employer1reasonforleaving" />
+                                                <div class="applicationradio" id="employer1-maywecontactradio">
+                                                    <label>May we contact your previous supervisor for a reference?</label>
+                                                    <input type="radio" id="employer1-maywecontact-yes" name="employer1-maywecontact" class="required">
+                                                    <label for="employer1-maywecontact-yes">Yes</label>
+                                                    <input type="radio" id="employer1-maywecontact-no" name="employer1-maywecontact">
+                                                    <label for="employer1-maywecontact-no">No</label>
+                                                </div>
+                                                <hr />
+                                                <label><b>Employer 2:</b></label>
+                                                <p />
+                                                <label>Company:</label>
+                                                <input class="required" type="text" name="employer2company" id="employer2company" />
+                                                <p />
+                                                <label>Phone:</label>
+                                                <input class="required" type="text" name="employer2phone" id="employer2phone" />
+                                                <p />
+                                                <label>Address:</label>
+                                                <input class="required" type="text" name="employer2address" id="employer2address" />
+                                                <p />
+                                                <label>Supervisor:</label>
+                                                <input class="required" type="text" name="employer2supervisor" id="employer2supervisor" />
+                                                <p />
+                                                <label>Job Title:</label>
+                                                <input class="required" type="text" name="employer2jobtitle" id="employer2jobtitle" />
+                                                <p />
+                                                <label>Starting Salary: $</label>
+                                                <input class="required" type="text" name="employer2startingsalary" id="employer2startingsalary" />
+                                                <p />
+                                                <label>Ending Salary: $</label>
+                                                <input class="required" type="text" name="employer2endingsalary" id="employer2endingsalary" />
+                                                <p />
+                                                <label>Responsibilities:</label>
+                                                <input class="required" type="text" name="employer2responsibilities" id="employer2responsibilities" />
+                                                <p />
+                                                <label>From:</label>
+                                                <input class="required datepicker" type="text" name="employer2from" id="employer2from" />
+                                                <label>To:</label>
+                                                <input class="required datepicker" type="text" name="employer2to" id="employer2to" />
+                                                <p />
+                                                <label>Reason for Leaving:</label>
+                                                <input class="required" type="text" name="employer2reasonforleaving" id="employer2reasonforleaving" />
+                                                <div class="applicationradio" id="employer2-maywecontactradio">
+                                                    <label>May we contact your previous supervisor for a reference?</label>
+                                                    <input type="radio" id="employer2-maywecontact-yes" name="employer2-maywecontact" class="required">
+                                                    <label for="employer2-maywecontact-yes">Yes</label>
+                                                    <input type="radio" id="employer2-maywecontact-no" name="employer2-maywecontact">
+                                                    <label for="employer2-maywecontact-no">No</label>
+                                                </div>
+                                                <hr />
+                                                <label><b>Employer 3:</b></label>
+                                                <p />
+                                                <label>Company:</label>
+                                                <input class="required" type="text" name="employer3company" id="employer3company" />
+                                                <p />
+                                                <label>Phone:</label>
+                                                <input class="required" type="text" name="employer3phone" id="employer3phone" />
+                                                <p />
+                                                <label>Address:</label>
+                                                <input class="required" type="text" name="employer3address" id="employer3address" />
+                                                <p />
+                                                <label>Supervisor:</label>
+                                                <input class="required" type="text" name="employer3supervisor" id="employer3supervisor" />
+                                                <p />
+                                                <label>Job Title:</label>
+                                                <input class="required" type="text" name="employer3jobtitle" id="employer3jobtitle" />
+                                                <p />
+                                                <label>Starting Salary: $</label>
+                                                <input class="required" type="text" name="employer3startingsalary" id="employer3startingsalary" />
+                                                <p />
+                                                <label>Ending Salary: $</label>
+                                                <input class="required" type="text" name="employer3endingsalary" id="employer3endingsalary" />
+                                                <p />
+                                                <label>Responsibilities:</label>
+                                                <input class="required" type="text" name="employer3responsibilities" id="employer3responsibilities" />
+                                                <p />
+                                                <label>From:</label>
+                                                <input class="required datepicker" type="text" name="employer3from" id="employer3from" />
+                                                <label>To:</label>
+                                                <input class="required datepicker" type="text" name="employer3to" id="employer3to" />
+                                                <p />
+                                                <label>Reason for Leaving:</label>
+                                                <input class="required" type="text" name="employer3reasonforleaving" id="employer3reasonforleaving" />
+                                                <div class="applicationradio" id="employer3-maywecontactradio">
+                                                    <label>May we contact your previous supervisor for a reference?</label>
+                                                    <input type="radio" id="employer3-maywecontact-yes" name="employer3-maywecontact" class="required">
+                                                    <label for="employer3-maywecontact-yes">Yes</label>
+                                                    <input type="radio" id="employer3-maywecontact-no" name="employer3-maywecontact">
+                                                    <label for="employer3-maywecontact-no">No</label>
+                                                </div>
+                                                <hr />
+                                                <label><b>Military Service:</b></label>
+                                                <p/>
+                                                <label>Branch:</label>
+                                                <input type="text" name="militarybranch" id="militarybranch" />
+                                                <p />
+                                                <label>From:</label>
+                                                <input type="text" class="datepicker" name="militaryfrom" id="militaryfrom" />
+                                                <label>To:</label>
+                                                <input type="text" class="datepicker" name="militaryto" id="militaryto" />
+                                                <p />
+                                                <label>Rank at Discharge:</label>
+                                                <input type="text" name="militaryrankatdischarge" id="militaryrankatdischarge" />
+                                                <p />
+                                                <label>Type of Discharge:</label>
+                                                <input type="text" name="militarytypeofdischarge" id="militarytypeofdischarge" />
+                                                <p/>
+                                                <label>If other than honorable, explain:</label>
+                                                <input type="text" name="militarydischargeexplanation" id="militarydischargeexplanation" />
+                                                <input type="button" value="Proceed" name="proceed" id="employersProceed" />
+                                            </form>
                                             <h3 id="signature_tab">Signature</h3>
                                             <form class="app_tab" id="signature">
-												<label><i>I certify that my answers are true and complete to the best of my knowledge.</i></label>
-												<p />
-												<label><i>If this application leads to employment, I understand that false or misleading information in my application or interview may result in my release.</i></label>
-												<p />
-												<label>Signature:</label>
-												<input type="text" name="signature" id="signature" />
-												<label>Date:</label>
-                                                <input type="text" class="required" name="datesigned" id="datesigned" />
+                                                <label><i>I certify that my answers are true and complete to the best of my knowledge.</i></label>
+                                                <p />
+                                                <label><i>If this application leads to employment, I understand that false or misleading information in my application or interview may result in my release.</i></label>
+                                                <p />
+                                                <label>Signature:</label>
+                                                <input type="text" name="signature" id="signature" />
+                                                <label>Date:</label>
+                                                <input type="text" class="required datepicker" name="datesigned" id="datesigned" />
+                                                <input type="button" value="Submit Application" name="submit" id="submitApplication" />
+
                                             </form>
                                         </div>
 
@@ -635,5 +665,9 @@
         </tr>
     </table>
 </body>
+
+<div id="dialog-confirm" title="Submit application?">
+    <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>You will not be able to make changes once you submit. Would you like to submit the application?</p>
+</div>
 
 </html>

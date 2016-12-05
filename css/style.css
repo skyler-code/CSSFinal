@@ -69,10 +69,11 @@ a:hover
 	width: 40px;
 }
 
-#zip {
-	width: 50px;
+#zip_code {
+	width: 70px;
 }
 
 .error {
     border: 1px solid red;
 }
+
