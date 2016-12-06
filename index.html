@@ -2,7 +2,9 @@
 <html>
 
 <head>
+	<title>Kirkwood Community College - Employment Application</title>
     <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="css/new_global_screen.css">
     <link rel="stylesheet" type="text/css" href="css/page_screen.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -62,18 +64,17 @@
 
                     <div class="global_breadcrumbs"><a href="http://www.kirkwood.edu/index.html">Home</a>&nbsp; > &nbsp;<a href='http://www.kirkwood.edu/hr2'>Employment Application</a></div>
 
+					
+					<!-- Page will look bad if I remove this code -->
                     <div class="page_account_links">
                         <!--display top bar account links-->
                     </div>
 
                     <div class="page_content">
                         <div class="page_account_title"><a href='http://www.kirkwood.edu/hr2'>Employment Application</a></div>
-                        <!--start template 26-->
                         <table class="global_page_content" cellpadding=0 cellspacing=0>
                             <tr>
                                 <td class="page_contents" valign=top>
-
-                                    <!-- Display Page Title -->
 
                                     <div class="page_text_default">
 
@@ -88,14 +89,14 @@
                                                 <input type="text" class="required" name="midinitial" id="midInitial" />
                                                 <input type="text" class="required" name="lname" id="lname" />
                                                 <p />
-                                                <label class="required_label">Address:</label>
+                                                <label>Address:</label>
                                                 <input type="text" class="required" name="streetaddress" id="streetaddress" />
                                                 <label>Apt #:</label>
                                                 <input type="text" name="aptnumber" id="aptnumber" />
                                                 <p />
-                                                <label class="required_label">City:</label>
+                                                <label>City:</label>
                                                 <input type="text" class="required" name="city" id="city" />
-                                                <label class="required_label">State:</label>
+                                                <label>State:</label>
                                                 <select id="state_select_menu">
                                                     <option value="AL">AL</option>
                                                     <option value="AK">AK</option>
@@ -149,26 +150,26 @@
                                                     <option value="WI">WI</option>
                                                     <option value="WY">WY</option>
                                                 </select>
-                                                <label class="required_label">Zip:</label>
-                                                <input type="zipcodeUS" class="required" name="zip_code" id="zip_code" />
+                                                <label>Zip:</label>
+                                                <input type="zipcodeUS" class="required number_input" name="zip_code" id="zip_code" />
                                                 <p />
-                                                <label class="required_label">Phone:</label>
+                                                <label>Phone:</label>
                                                 <input type="phoneUS" class="required" name="phonenumber" id="phone_number" />
                                                 <p />
-                                                <label class="required_label">Email Address:</label>
+                                                <label>Email Address:</label>
                                                 <input type="email" class="required" name="emailaddress" id="email_address" />
                                                 <p />
-                                                <label class="required_label">Date Available:</label>
-                                                <input type="text" class="required datepicker" name="dateavailable" id="date_available" />
+                                                <label>Date Available:</label>
+                                                <input type="text" class="required datepicker number_input" name="dateavailable" id="date_available" />
                                                 <p />
-                                                <label class="required_label">Social Security No.:</label>
-                                                <input type="text" class="required" name="socialsecuritynumber" id="social_security_number" />
+                                                <label>Social Security No.:</label>
+                                                <input type="text" class="required number_input" name="socialsecuritynumber" id="social_security_number" />
                                                 <p />
-                                                <label class="required_label">Desired Salary: $</label>
-                                                <input type="text" class="required" name="desiredsalary" id="desired_salary" />
+                                                <label>Desired Salary: $</label>
+                                                <input type="text" class="required number_input" name="desiredsalary" id="desired_salary" />
                                                 <p />
                                                 <div class="applicationradio" id="uscitizenradio">
-                                                    <label class="required_label">Are you a citizen of the United States?</label>
+                                                    <label>Are you a citizen of the United States?</label>
                                                     <input type="radio" id="uscitizen-yes" name="uscitizen" class="required">
                                                     <label for="uscitizen-yes">Yes</label>
                                                     <input type="radio" id="uscitizen-no" name="uscitizen">
@@ -176,8 +177,8 @@
                                                 </div>
                                                 <p />
                                                 <div class="applicationradio" id="authorizedtoworkinusradio">
-                                                    <label>If no, are you authorized to work in the U.S.?</label>
-                                                    <input type="radio" id="authorizedtoworkinus-yes" name="authorizedtoworkinus" class="required">
+                                                    <label class="required_label">If no, are you authorized to work in the U.S.?</label>
+                                                    <input type="radio" id="authorizedtoworkinus-yes" name="authorizedtoworkinus">
                                                     <label for="authorizedtoworkinus-yes">Yes</label>
                                                     <input type="radio" id="authorizedtoworkinus-no" name="authorizedtoworkinus">
                                                     <label for="authorizedtoworkinus-no">No</label>
@@ -192,8 +193,8 @@
                                                 </div>
                                                 <p />
                                                 <div id="previous_worker">
-                                                    <label>If yes, when was your last day of work:</label>
-                                                    <input type="text" class="datepicker" name="whendidyouworkforthiscompany" id="whendidyouworkforthiscompany" />
+                                                    <label class="required_label">If yes, when was your last day of work:</label>
+                                                    <input type="text" class="datepicker number_input" name="whendidyouworkforthiscompany" id="whendidyouworkforthiscompany" />
                                                 </div>
                                                 <p />
                                                 <div class="applicationradio" id="haveyoubeenconvictedofafelonyradio">
@@ -205,12 +206,12 @@
                                                 </div>
                                                 <p/>
                                                 <div id="felony_explanation">
-                                                    <label>If yes, explain:</label>
-                                                    <input type="text" class="required" name="felonyexplanation" id="felonyexplanation" />
+                                                    <label class="required_label">If yes, explain:</label>
+                                                    <input type="text" name="felonyexplanation" id="felonyexplanation" />
                                                 </div>
                                                 <p />
 
-                                                <input type="button" value="Proceed" name="proceed" id="personalProceed" />
+                                                <input class="right_button" type="button" value="Proceed" name="proceed" id="personalProceed" />
                                             </form>
                                             <h3 id="education_tab">Education</h3>
                                             <form class="app_tab" id="education_details">
@@ -221,9 +222,9 @@
                                                 <input type="text" class="required" name="highschooladdress" id="highschooladdress" />
                                                 <p />
                                                 <label>From:</label>
-                                                <input type="text" class="required datepicker" name="highschoolfrom" id="highschoolfrom" />
+                                                <input type="text" class="required datepicker number_input" name="highschoolfrom" id="highschoolfrom" />
                                                 <label>To:</label>
-                                                <input type="text" class="required datepicker" name="highschoolto" id="highschoolto" />
+                                                <input type="text" class="required datepicker number_input" name="highschoolto" id="highschoolto" />
                                                 <div class="applicationradio" id="highschool-didyougraduateradio">
                                                     <label>Did you graduate?</label>
                                                     <input type="radio" id="highschool-didyougraduate-yes" name="highschool-didyougraduate" class="required">
@@ -232,9 +233,10 @@
                                                     <label for="highschool-didyougraduate-no">No</label>
                                                 </div>
                                                 <p />
-                                                <label>Diploma:</label>
-                                                <input type="text" class="required" name="highschooldiploma" id="highschooldiploma" />
-
+												<div id="highschool_diploma" class="education_degree">
+                                                <label class="required_label">Diploma:</label>
+                                                <input type="text" name="highschooldiploma" id="highschooldiploma" />
+												</div>
                                                 <hr />
                                                 <label>College:</label>
                                                 <input type="text" name="collegename" id="collegename" />
@@ -243,19 +245,21 @@
                                                 <input type="text" name="collegeaddress" id="collegeaddress" />
                                                 <p />
                                                 <label>From:</label>
-                                                <input type="text" class="datepicker" name="collegefrom" id="collegefrom" />
+                                                <input type="text" class="datepicker number_input" name="collegefrom" id="collegefrom" />
                                                 <label>To:</label>
-                                                <input type="text" class="datepicker" name="collegeto" id="collegeto" />
+                                                <input type="text" class="datepicker number_input" name="collegeto" id="collegeto" />
                                                 <div class="applicationradio" id="college-didyougraduateradio">
                                                     <label>Did you graduate?</label>
-                                                    <input type="radio" id="college-didyougraduate-yes" name="college-didyougraduate" class="required">
+                                                    <input type="radio" id="college-didyougraduate-yes" name="college-didyougraduate">
                                                     <label for="college-didyougraduate-yes">Yes</label>
                                                     <input type="radio" id="college-didyougraduate-no" name="college-didyougraduate">
                                                     <label for="college-didyougraduate-no">No</label>
                                                 </div>
                                                 <p />
-                                                <label>Degree:</label>
+												<div id="college_degree" class="education_degree">
+                                                <label class="required_label">Degree:</label>
                                                 <input type="text" name="collegedegree" id="collegedegree" />
+												</div>
                                                 <hr/>
                                                 <label>Other:</label>
                                                 <input type="text" name="othername" id="othername" />
@@ -264,21 +268,24 @@
                                                 <input type="text" name="otheraddress" id="otheraddress" />
                                                 <p />
                                                 <label>From:</label>
-                                                <input type="text" class="datepicker" name="otherfrom" id="otherfrom" />
+                                                <input type="text" class="datepicker number_input" name="otherfrom" id="otherfrom" />
                                                 <label>To:</label>
-                                                <input type="text" class="datepicker" name="otherto" id="otherto" />
+                                                <input type="text" class="datepicker number_input" name="otherto" id="otherto" />
                                                 <div class="applicationradio" id="other-didyougraduateradio">
                                                     <label>Did you graduate?</label>
-                                                    <input type="radio" id="other-didyougraduate-yes" name="other-didyougraduate" class="required">
+                                                    <input type="radio" id="other-didyougraduate-yes" name="other-didyougraduate">
                                                     <label for="other-didyougraduate-yes">Yes</label>
                                                     <input type="radio" id="other-didyougraduate-no" name="other-didyougraduate">
                                                     <label for="other-didyougraduate-no">No</label>
                                                 </div>
                                                 <p />
-                                                <label>Degree:</label>
+												<div id="other_degree" class="education_degree">
+                                                <label class="required_label">Degree:</label>
                                                 <input type="text" name="otherdegree" id="otherdegree" />
-                                                <input type="button" value="Previous" name="previous" id="educationPrevious" />
-                                                <input type="button" value="Proceed" name="proceed" id="educationProceed" />
+												</div>
+												<p />
+                                                <input class="right_button" type="button" value="Proceed" name="proceed" id="educationProceed" />
+                                                <input class="right_button" type="button" value="Previous" name="previous" id="educationPrevious" />
                                             </form>
                                             <h3 id="references_tab">References</h3>
                                             <form class="app_tab" id="reference_details">
@@ -294,7 +301,7 @@
                                                 <label>Company:</label>
                                                 <input class="required" type="text" name="referencecompany1" id="referencecompany1" />
                                                 <label>Phone:</label>
-                                                <input class="required" type="text" name="referencephone1" id="referencephone1" />
+                                                <input class="required" type="phoneUS" name="referencephone1" id="referencephone1" />
                                                 <p />
                                                 <label>Address:</label>
                                                 <input class="required" type="text" name="referenceaddress1" id="referenceaddress1" />
@@ -309,7 +316,7 @@
                                                 <label>Company:</label>
                                                 <input class="required" type="text" name="referencecompany2" id="referencecompany2" />
                                                 <label>Phone:</label>
-                                                <input class="required" type="text" name="referencephone2" id="referencephone2" />
+                                                <input class="required" type="phoneUS" name="referencephone2" id="referencephone2" />
                                                 <p />
                                                 <label>Address:</label>
                                                 <input class="required" type="text" name="referenceaddress2" id="referenceaddress2" />
@@ -324,11 +331,13 @@
                                                 <label>Company:</label>
                                                 <input class="required" type="text" name="referencecompany3" id="referencecompany3" />
                                                 <label>Phone:</label>
-                                                <input class="required" type="text" name="referencephone3" id="referencephone3" />
+                                                <input class="required" type="phoneUS" name="referencephone3" id="referencephone3" />
                                                 <p />
                                                 <label>Address:</label>
                                                 <input class="required" type="text" name="referenceaddress3" id="referenceaddress3" />
-                                                <input type="button" value="Proceed" name="proceed" id="referencesProceed" />
+												<p />
+                                                <input class="right_button" type="button" value="Proceed" name="proceed" id="referencesProceed" />
+												<input class="right_button" type="button" value="Previous" name="previous" id="referencesPrevious" />
                                             </form>
                                             <h3 id="previous_employment_tab">Previous Employment</h3>
                                             <form class="app_tab" id="previous_employment_details">
@@ -338,7 +347,7 @@
                                                 <input class="required" type="text" name="employer1company" id="employer1company" />
                                                 <p />
                                                 <label>Phone:</label>
-                                                <input class="required" type="text" name="employer1phone" id="employer1phone" />
+                                                <input class="required" type="phoneUS" name="employer1phone" id="employer1phone" />
                                                 <p />
                                                 <label>Address:</label>
                                                 <input class="required" type="text" name="employer1address" id="employer1address" />
@@ -350,18 +359,18 @@
                                                 <input class="required" type="text" name="employer1jobtitle" id="employer1jobtitle" />
                                                 <p />
                                                 <label>Starting Salary: $</label>
-                                                <input class="required" type="text" name="employer1startingsalary" id="employer1startingsalary" />
+                                                <input class="required number_input" type="text" name="employer1startingsalary" id="employer1startingsalary" />
                                                 <p />
                                                 <label>Ending Salary: $</label>
-                                                <input class="required" type="text" name="employer1endingsalary" id="employer1endingsalary" />
+                                                <input class="required number_input" type="text" name="employer1endingsalary" id="employer1endingsalary" />
                                                 <p />
                                                 <label>Responsibilities:</label>
                                                 <input class="required" type="text" name="employer1responsibilities" id="employer1responsibilities" />
                                                 <p />
                                                 <label>From:</label>
-                                                <input class="required datepicker" type="text" name="employer1from" id="employer1from" />
+                                                <input class="required datepicker number_input" type="text" name="employer1from" id="employer1from" />
                                                 <label>To:</label>
-                                                <input class="required datepicker" type="text" name="employer1to" id="employer1to" />
+                                                <input class="required datepicker number_input" type="text" name="employer1to" id="employer1to" />
                                                 <p />
                                                 <label>Reason for Leaving:</label>
                                                 <input class="required" type="text" name="employer1reasonforleaving" id="employer1reasonforleaving" />
@@ -379,7 +388,7 @@
                                                 <input class="required" type="text" name="employer2company" id="employer2company" />
                                                 <p />
                                                 <label>Phone:</label>
-                                                <input class="required" type="text" name="employer2phone" id="employer2phone" />
+                                                <input class="required" type="phoneUS" name="employer2phone" id="employer2phone" />
                                                 <p />
                                                 <label>Address:</label>
                                                 <input class="required" type="text" name="employer2address" id="employer2address" />
@@ -391,18 +400,18 @@
                                                 <input class="required" type="text" name="employer2jobtitle" id="employer2jobtitle" />
                                                 <p />
                                                 <label>Starting Salary: $</label>
-                                                <input class="required" type="text" name="employer2startingsalary" id="employer2startingsalary" />
+                                                <input class="required number_input" type="text" name="employer2startingsalary" id="employer2startingsalary" />
                                                 <p />
                                                 <label>Ending Salary: $</label>
-                                                <input class="required" type="text" name="employer2endingsalary" id="employer2endingsalary" />
+                                                <input class="required number_input" type="text" name="employer2endingsalary" id="employer2endingsalary" />
                                                 <p />
                                                 <label>Responsibilities:</label>
                                                 <input class="required" type="text" name="employer2responsibilities" id="employer2responsibilities" />
                                                 <p />
                                                 <label>From:</label>
-                                                <input class="required datepicker" type="text" name="employer2from" id="employer2from" />
+                                                <input class="required datepicker number_input" type="text" name="employer2from" id="employer2from" />
                                                 <label>To:</label>
-                                                <input class="required datepicker" type="text" name="employer2to" id="employer2to" />
+                                                <input class="required datepicker number_input" type="text" name="employer2to" id="employer2to" />
                                                 <p />
                                                 <label>Reason for Leaving:</label>
                                                 <input class="required" type="text" name="employer2reasonforleaving" id="employer2reasonforleaving" />
@@ -420,7 +429,7 @@
                                                 <input class="required" type="text" name="employer3company" id="employer3company" />
                                                 <p />
                                                 <label>Phone:</label>
-                                                <input class="required" type="text" name="employer3phone" id="employer3phone" />
+                                                <input class="required" type="phoneUS" name="employer3phone" id="employer3phone" />
                                                 <p />
                                                 <label>Address:</label>
                                                 <input class="required" type="text" name="employer3address" id="employer3address" />
@@ -432,18 +441,18 @@
                                                 <input class="required" type="text" name="employer3jobtitle" id="employer3jobtitle" />
                                                 <p />
                                                 <label>Starting Salary: $</label>
-                                                <input class="required" type="text" name="employer3startingsalary" id="employer3startingsalary" />
+                                                <input class="required number_input" type="text" name="employer3startingsalary" id="employer3startingsalary" />
                                                 <p />
                                                 <label>Ending Salary: $</label>
-                                                <input class="required" type="text" name="employer3endingsalary" id="employer3endingsalary" />
+                                                <input class="required number_input" type="text" name="employer3endingsalary" id="employer3endingsalary" />
                                                 <p />
                                                 <label>Responsibilities:</label>
                                                 <input class="required" type="text" name="employer3responsibilities" id="employer3responsibilities" />
                                                 <p />
                                                 <label>From:</label>
-                                                <input class="required datepicker" type="text" name="employer3from" id="employer3from" />
+                                                <input class="required datepicker number_input" type="text" name="employer3from" id="employer3from" />
                                                 <label>To:</label>
-                                                <input class="required datepicker" type="text" name="employer3to" id="employer3to" />
+                                                <input class="required datepicker number_input" type="text" name="employer3to" id="employer3to" />
                                                 <p />
                                                 <label>Reason for Leaving:</label>
                                                 <input class="required" type="text" name="employer3reasonforleaving" id="employer3reasonforleaving" />
@@ -461,9 +470,9 @@
                                                 <input type="text" name="militarybranch" id="militarybranch" />
                                                 <p />
                                                 <label>From:</label>
-                                                <input type="text" class="datepicker" name="militaryfrom" id="militaryfrom" />
+                                                <input type="text" class="datepicker number_input" name="militaryfrom" id="militaryfrom" />
                                                 <label>To:</label>
-                                                <input type="text" class="datepicker" name="militaryto" id="militaryto" />
+                                                <input type="text" class="datepicker number_input" name="militaryto" id="militaryto" />
                                                 <p />
                                                 <label>Rank at Discharge:</label>
                                                 <input type="text" name="militaryrankatdischarge" id="militaryrankatdischarge" />
@@ -473,7 +482,9 @@
                                                 <p/>
                                                 <label>If other than honorable, explain:</label>
                                                 <input type="text" name="militarydischargeexplanation" id="militarydischargeexplanation" />
-                                                <input type="button" value="Proceed" name="proceed" id="employersProceed" />
+												<p />
+                                                <input class="right_button" type="button" value="Proceed" name="proceed" id="employersProceed" />
+												<input class="right_button" type="button" value="Previous" name="previous" id="employersPrevious" />
                                             </form>
                                             <h3 id="signature_tab">Signature</h3>
                                             <form class="app_tab" id="signature">
@@ -482,14 +493,14 @@
                                                 <label><i>If this application leads to employment, I understand that false or misleading information in my application or interview may result in my release.</i></label>
                                                 <p />
                                                 <label>Signature:</label>
-                                                <input type="text" name="signature" id="signature" />
+                                                <input type="text" class="required" name="signature" id="signature" />
                                                 <label>Date:</label>
-                                                <input type="text" class="required datepicker" name="datesigned" id="datesigned" />
-                                                <input type="button" value="Submit Application" name="submit" id="submitApplication" />
-
+                                                <input type="text" class="required datepicker number_input" name="datesigned" id="datesigned" />
+												<p />
+                                                <input class="right_button" type="button" value="Submit Application" name="submit" id="submitApplication" />
+												<input class="right_button" type="button" value="Previous" name="previous" id="submitPrevious" />
                                             </form>
                                         </div>
-
                                     </div>
                                 </td>
 
@@ -542,7 +553,7 @@
                                         <li><a href="http://www.kirkwood.edu/students.html" target="">Current Students</a></li>
                                         <li><a href="http://www.kirkwood.edu/deanofstudents.html" target="">Dean of Students</a></li>
                                         <li><a href="http://www.kirkwood.edu/eaglecard.html" target="">EagleCard</a></li>
-                                        <li><a href="http://www.kirkwood.edu/http://bookstore.kirkwood.edu/eagletech" target="_blank">EagleTech</a></li>
+                                        <li><a href="http://bookstore.kirkwood.edu/eagletech" target="_blank">EagleTech</a></li>
                                         <li><a href="http://www.kirkwood.edu/eaglepride.html" target="">EaglePride</a></li>
                                         <li><a href="http://www.kirkwood.edu/academics.html" target="">Explore Your Interests</a></li>
                                         <li><a href="http://www.kirkwood.edu/financialaid.html" target="">Financial Aid</a></li>

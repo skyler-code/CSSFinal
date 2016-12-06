@@ -54,7 +54,7 @@ a:hover
 
 #midInitial
 {
-	width: 50px;
+	width: 35px;
 }
 
 #lname {
@@ -69,11 +69,17 @@ a:hover
 	width: 40px;
 }
 
-#zip_code {
+.number_input {
 	width: 70px;
 }
 
 .error {
     border: 1px solid red;
+}
+
+.right_button {
+	margin-left: 2.5px;
+	margin-right: 2.5px;
+	float: right;
 }
 
