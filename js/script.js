@@ -1,7 +1,15 @@
 console.log("javascript loaded...");
 
+var mobileEnabled = false;
+//var mobileEnabled = true;
+    
+if (mobileEnabled == true){
+    window.location = "mobile.html";
+}
+
 $(document).ready(function () {
 	console.log("jquery loaded...");
+    
 	$('#application_form > h3').slice(1).addClass( "ui-state-disabled" );
 	$('#authorizedtoworkinusradio').hide();
 	$('#felony_explanation').hide();
@@ -138,7 +146,7 @@ $(document).ready(function () {
 	
 	$('#referencesProceed').click(function(){
 		
-		//if( $('#education_details').valid() == true ) {
+		//if( $('#reference_details').valid() == true ) {
 			$('#previous_employment_tab').removeClass("ui-state-disabled");
 			$('#references_tab').addClass("ui-state-disabled");
 			var activeTab = $( "#application_form" ).accordion( "option", "active" );
@@ -147,7 +155,7 @@ $(document).ready(function () {
 	});
 	$('#employersProceed').click(function(){
 		
-		//if( $('#education_details').valid() == true ) {
+		//if( $('#previous_employment_details').valid() == true ) {
 			$('#signature_tab').removeClass("ui-state-disabled");
 			$('#previous_employment_tab').addClass("ui-state-disabled");
 			var activeTab = $( "#application_form" ).accordion( "option", "active" );

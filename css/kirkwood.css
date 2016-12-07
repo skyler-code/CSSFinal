@@ -20,16 +20,16 @@ form
     overflow:hidden;
     background-color: white;
     color: black;
-    position: relative;
+    position: relative;  
     top: 30px;
     left: 0;
 }
 
 .global_page_content
 {
-  overflow: hidden;
-  width:100%;
-  height: 100%;
+    overflow: hidden;
+    width:100%;
+    height: 100%;
 }
 
 .global_header_box
@@ -57,82 +57,77 @@ form
 
 .global_navigation_bar2 li
 {
-  
-
-  font-size:.9em;
-list-style-type: none;
-  display:inline;
-  padding:0 .1em 0 .1em;
-
-
+    font-size:.9em;
+    list-style-type: none;
+    display:inline;
+    padding:0 .1em 0 .1em;
 }
 
 .global_navigation_bar2 a
 {
-  color: #005399;
-  text-decoration:none;
+    color: #005399;
+    text-decoration:none;
 }
 
 .global_navigation_bar2 a:link
 {
-  color: #005399;
-  text-decoration:none;
+    color: #005399;
+    text-decoration:none;
 }
 
 .global_navigation_bar2 a:visited
 {
-  color: #005399;
-  text-decoration:none;
+    color: #005399;
+    text-decoration:none;
 }
 
 .global_navigation_bar2 a:active
 {
-  color: #005399;
-  text-decoration:none;
+    color: #005399;
+    text-decoration:none;
 }
 
 .global_navigation_bar2 a:hover
 {
-  color: #005399;
-  text-decoration:underline;
+    color: #005399;
+    text-decoration:underline;
 }
 
 .global_breadcrumbs
 {
-  background-color: white;
-  color: #005399;
-  font-size: 7.5pt;
-  padding:.4em 0 0 .25em;
-  
-	height: 14px;
+    background-color: white;
+    color: #005399;
+    font-size: 7.5pt;
+    padding:.4em 0 0 .25em;
+    height: 14px;
 }
 
 .global_breadcrumbs a:link
 {
-  background-color: white;
-  color: #005399;
-  text-decoration:none;
+    background-color: white;
+    color: #005399;
+    text-decoration:none;
 }
 
 .global_breadcrumbs a:visited
 {
-  background-color: white;
-  color: #005399;
-  text-decoration:none;
+    background-color: white;
+    color: #005399;
+    text-decoration:none;
 }
 
 .global_breadcrumbs a:active
 {
-  background-color: white;
-  color: #005399;
-  text-decoration:none;
+    background-color: white;
+    color: #005399;
+    text-decoration:none;
 }
 
 .global_breadcrumbs a:hover
 {
-  background-color: white;
-  color: #005399;
-  text-decoration: underline;
+    background-color: white;
+    color: #005399;
+    text-decoration: underline;
 }
 
 #footer
@@ -193,6 +188,7 @@ list-style-type: none;
     position:relative;
     float:right;
 }
+
 .footer_list_icon
 {
     margin:0;
@@ -200,6 +196,7 @@ list-style-type: none;
     padding-left:0px;
     text-decoration:none;
 }
+
 .footer_list_icon li
 {
     font-size:.6em;
@@ -212,9 +209,12 @@ list-style-type: none;
     text-decoration:none;
     color:#333;
 }
-#footer_icons a img {
+
+#footer_icons a img 
+{
     padding-right:3px;
 }
+
 #footer_icons 
 {
     padding-top:8px;
@@ -233,6 +233,7 @@ list-style-type: none;
     font-size:.6em;
     line-height:1.2em;
 }
+
 .footer_bottom 
 {
     background-color: white;
@@ -242,10 +243,12 @@ list-style-type: none;
     position: relative;
     text-align: center;
 }
+
 .footer_bottom ul 
 {
     display: inline;
 }
+
 .footer_bottom li 
 {
     display: inline;
@@ -255,13 +258,15 @@ list-style-type: none;
     padding-right: 0.4em;
     padding-top: 0;
 }
-.footer_bottom a:hover, .footer_bottom a:visited, .footer_bottom a:link, .footer_bottom a:focus 
-{
+
+.footer_bottom a:hover, .footer_bottom a:visited, .footer_bottom a:link, .footer_bottom a:focus
+ {
    text-decoration:none;
    color: #333;
 }
-.footer_bottom_list 
-{
+
+.footer_bottom_list
+ {
     padding-bottom: 0;
     padding-left: 0;
     padding-right: 0;
@@ -275,6 +280,7 @@ list-style-type: none;
     width:6em;
     height:1.3em;
 }
+
 .search-input
 {
     border:0em;
@@ -296,6 +302,7 @@ list-style-type: none;
     height:1.3em;
     width:1.5em;
 }
+
 #search-button
 {
     position:relative;
@@ -337,105 +344,104 @@ list-style-type: none;
 
 .page_nav_links
 {
- background:white url("http://www.kirkwood.edu/images/gradient_yellow_vert.jpg") repeat-x;
- width: 168px;
- height: 100%;
- color:#005399;
- position: relative;
- top: 0px;
- bottom: 0px;
+    background:white url("http://www.kirkwood.edu/images/gradient_yellow_vert.jpg") repeat-x;
+    width: 168px;
+    height: 100%;
+    color:#005399;
+    position: relative;
+    top: 0px;
+    bottom: 0px;
 }
 
 .page_nav_links ul
 {
- padding: 0px;
- margin: 0px;
+    padding: 0px;
+    margin: 0px;
 }
 
 
 .page_nav_links li
 {
-  list-style-type: none;
-  padding-top: .9em;
-  padding-left: 6px;
-  padding-right: 3px;
-  font-weight: bold;
+    list-style-type: none;
+    padding-top: .9em;
+    padding-left: 6px;
+    padding-right: 3px;
+    font-weight: bold;
 }
 
 .page_nav_links a:link
 {
-  text-decoration: none;
-  color:#005399;
-  background-color: inherit;
-  text-decoration: none;
+    text-decoration: none;
+    color:#005399;
+    background-color: inherit;
+    text-decoration: none;
 }
 
 .page_nav_links a:visited
 {
-  text-decoration: none;
-  /*color:#7e375f;*/
-  color: #005399;
-  background-color: inherit;
-  text-decoration: none;
-  font-style: italic;
-  /*border-bottom: 1px inset #e0aa0f;*/
+    text-decoration: none;
+    /*color:#7e375f;*/
+    color: #005399;
+    background-color: inherit;
+    text-decoration: none;
+    font-style: italic;
+    /*border-bottom: 1px inset #e0aa0f;*/
 }
 
 .page_nav_links a:active
 {
-  text-decoration: none;
-  color:#005399;
-  background-color: inherit;
-  text-decoration: none;
+    text-decoration: none;
+    color:#005399;
+    background-color: inherit;
+    text-decoration: none;
 }
 
 .page_nav_links a:hover
 {
-  text-decoration: none;
-  color:#256BEB;
-  background-color: inherit;
-  text-decoration: none;
+    text-decoration: none;
+    color:#256BEB;
+    background-color: inherit;
+    text-decoration: none;
 }
 
 .page_account_title
 {
-  font-size:20pt;
-  letter-spacing: -1px;
-  color:#005399;
-  font-weight: bold;
-  position: absolute;
-  top: -.6em;
-  left: 50px;
-  background-color: white;
-  padding-right: .5em;
-  padding-left: .5em;
-  text-decoration: none;
+    font-size:20pt;
+    letter-spacing: -1px;
+    color:#005399;
+    font-weight: bold;
+    position: absolute;
+    top: -.6em;
+    left: 50px;
+    background-color: white;
+    padding-right: .5em;
+    padding-left: .5em;
+    text-decoration: none;
 }
 
 .page_account_title a:link
 {
-  color:#005399;
-  background-color: white;
-  text-decoration: none;
+    color:#005399;
+    background-color: white;
+    text-decoration: none;
 }
 
 .page_contents
 {
-  padding-top: 0px;
-  padding-right: 5px;
-  padding-left: 5px;
-  padding-bottom: 10px;
-  height: 100%;
+    padding-top: 0px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    height: 100%;
 }
 
 .page_text_default
 {
-  margin-top: 18px;
-  margin-left: 5px;
-  margin-bottom: 10px;
-  width: 590px;
-  height: 100%;
-  overflow: hidden;
+    margin-top: 18px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    width: 590px;
+    height: 100%;
+    overflow: hidden;
 }
-
 
