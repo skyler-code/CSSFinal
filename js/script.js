@@ -48,11 +48,13 @@ $(document).ready(function () {
 	$("#social_security_number").rules("add", {number: true, maxlength: 9, minlength: 9});
 	$("#desired_salary").rules("add", {number: true});
 	$("#whendidyouworkforthiscompany").rules("add", {required: '#haveyouworkedforthiscompany-yes:checked'});
+	$("#authorizedtoworkinus-yes").rules("add", {required: '#uscitizen-no:checked'});
 	$("#felonyexplanation").rules("add", {required: '#haveyoubeenconvictedofafelony-yes:checked'});
 	$("#previous_worker").rules("add", {required: '#haveyouworkedforthiscompany-yes:checked'});
 	$("#highschooldiploma").rules("add", {required: '#highschool-didyougraduate-yes:checked'});
 	$("#collegedegree").rules("add", {required: '#college-didyougraduate-yes:checked'});
 	$("#otherdegree").rules("add", {required: '#other-didyougraduate-yes:checked'});
+	
 	
 	$("#uscitizen-no").click(function(){
 		$("#authorizedtoworkinusradio").show();
@@ -170,20 +172,23 @@ $(document).ready(function () {
 	});
 	
 	$( "#dialog-confirm" ).dialog({
-			autoOpen: false,
-			resizable: false,
-			height: "auto",
-			width: 400,
-			modal: true,
-			buttons: {
-				"Submit Application": function() {
+		autoOpen: false,
+		resizable: false,
+		height: "auto",
+		width: 400,
+		modal: true,
+		buttons: {
+			"Submit Application": function() {
 				$( this ).dialog( "close" );
 			},
 			Cancel: function() {
-			$( this ).dialog( "close" );
+				$( this ).dialog( "close" );
 			}
-			}
+		}
 	});
 	
 });
 
+function SubmissionComplete(){
+	
+}
