@@ -47,6 +47,12 @@ $(document).ready(function () {
 	$("#signature").validate({ errorPlacement: function(error, element) {} });
 	$("#social_security_number").rules("add", {number: true, maxlength: 9, minlength: 9});
 	$("#desired_salary").rules("add", {number: true});
+	$("#employer1startingsalary").rules("add", {number: true});
+	$("#employer1endingsalary").rules("add", {number: true});
+	$("#employer2startingsalary").rules("add", {number: true});
+	$("#employer2endingsalary").rules("add", {number: true});
+	$("#employer3startingsalary").rules("add", {number: true});
+	$("#employer3endingsalary").rules("add", {number: true});
 	$("#whendidyouworkforthiscompany").rules("add", {required: '#haveyouworkedforthiscompany-yes:checked'});
 	$("#authorizedtoworkinus-yes").rules("add", {required: '#uscitizen-no:checked'});
 	$("#felonyexplanation").rules("add", {required: '#haveyoubeenconvictedofafelony-yes:checked'});
@@ -128,41 +134,41 @@ $(document).ready(function () {
 	
 	$('#personalProceed').click(function(){
 		
-		//if( $('#personal_details').valid() == true ) {
+		if( $('#personal_details').valid() == true ) {
 			$('#education_tab').removeClass("ui-state-disabled");
 			$("#personal_details_tab").addClass( "ui-state-disabled" );
 			var activeTab = $( "#application_form" ).accordion( "option", "active" );
 			$('#application_form').accordion("option", "active", activeTab + 1);
-		//}
+		}
 	});
 	
 	$('#educationProceed').click(function(){
 		
-		//if( $('#education_details').valid() == true ) {
+		if( $('#education_details').valid() == true ) {
 			$('#references_tab').removeClass("ui-state-disabled");
 			$('#education_tab').addClass("ui-state-disabled");
 			var activeTab = $( "#application_form" ).accordion( "option", "active" );
 			$('#application_form').accordion("option", "active", activeTab + 1);
-		//}
+		}
 	});
 	
 	$('#referencesProceed').click(function(){
 		
-		//if( $('#reference_details').valid() == true ) {
+		if( $('#reference_details').valid() == true ) {
 			$('#previous_employment_tab').removeClass("ui-state-disabled");
 			$('#references_tab').addClass("ui-state-disabled");
 			var activeTab = $( "#application_form" ).accordion( "option", "active" );
 			$('#application_form').accordion("option", "active", activeTab + 1);
-		//}
+		}
 	});
 	$('#employersProceed').click(function(){
 		
-		//if( $('#previous_employment_details').valid() == true ) {
+		if( $('#previous_employment_details').valid() == true ) {
 			$('#signature_tab').removeClass("ui-state-disabled");
 			$('#previous_employment_tab').addClass("ui-state-disabled");
 			var activeTab = $( "#application_form" ).accordion( "option", "active" );
 			$('#application_form').accordion("option", "active", activeTab + 1);
-		//}
+		}
 	});
 	
 	$('#submitApplication').click(function(){
@@ -188,7 +194,3 @@ $(document).ready(function () {
 	});
 	
 });
-
-function SubmissionComplete(){
-	
-}
